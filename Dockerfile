@@ -26,6 +26,9 @@ RUN chmod +x /usr/local/tomcat/bin/setenv.sh
 RUN mkdir -p /usr/local/tomcat/conf/Catalina/localhost
 COPY context.xml /usr/local/tomcat/conf/Catalina/localhost/$CONTEXT_PATH.xml
 
+# Copy our source to the image. Folder may be overwrite by using volume mapping.
+COPY home /usr/local/xslweb/home
+
 RUN mkdir -p $XSLWEB_VERSION_DIR
 
 RUN curl $XSLWEB_URL --output $INSTALL_DIR/$XSLWEB_FILE
