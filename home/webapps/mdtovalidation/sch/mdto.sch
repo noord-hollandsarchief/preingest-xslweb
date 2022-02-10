@@ -37,7 +37,7 @@
 	<pattern>
 		<rule context="mdto:bestand">
 			<assert test="count(mdto:checksum) = 1">Element "checksumGegevens" niet gevonden in MDTO-metadata</assert>
-			<assert test="matches(mdto:checksum/mdto:checksumAlgoritme/mdto:begripLabel, '^(SHA-224|SHA-384|SHA-256|SHA-512)$')">De waarde van het "checksumAlgoritme"-gegeven in de MDTO-metadata is niet SHA224, SHA384, SHA256, of SHA512 maar "<value-of select="mdto:checksum/mdto:checksumAlgoritme/mdto:begripLabel"/>"</assert>
+			<assert test="matches(mdto:checksum/mdto:checksumAlgoritme/mdto:begripLabel, '^(SHA-224|SHA-384|SHA-256|SHA-512|SHA224|SHA384|SHA256|SHA512)$')">De waarde van het "checksumAlgoritme"-gegeven in de MDTO-metadata is niet SHA-224 (SHA224), SHA-384 (SHA384), SHA-256 (SHA256), of SHA-512 (SHA512) maar "<value-of select="mdto:checksum/mdto:checksumAlgoritme/mdto:begripLabel"/>"</assert>
 			<assert test="string-length(mdto:checksum/mdto:checksumWaarde) &gt; 0">De waarde van het "checksumWaarde"-gegeven in de MDTO-metadata is leeg</assert>
 		</rule>
 	</pattern>
