@@ -30,7 +30,7 @@
 			(mdto:begripCode = 'Openbaarheid/AW1995/BeperktOpenbaar-particulier/1.0' and ./mdto:begripLabel = 'beperkt openbaar; contractuele afspraken met archiefvormer (Archiefwet 1995)') or
 			(mdto:begripCode = 'Openbaarheid/AW1995/Openbaar/1.0' and ./mdto:begripLabel = 'openbaar (Archiefwet 1995)') or
 			(mdto:begripCode = 'Openbaarheid/AW1995/Openbaar-milieu/1.0' and ./mdto:begripLabel = 'openbaar; mileu-informatie (Archiefwet 1995)') or
-			(mdto:begripCode = 'Openbaarheid/AW1995/NietBeoordeeld/1.0' and ./mdto:begripLabel = 'openbaarheid niet beoordeeld (Archiefwet 1995)')">Combinatie begripCode en begripLabel niet gevonden uit de begrippenlijst Openbaarheid – Archiefwet 1995: Code="<value-of select="./mdto:begripCode"/>" en label="<value-of select="./mdto:begripLabel"/>"</assert>
+			(mdto:begripCode = 'Openbaarheid/AW1995/NietBeoordeeld/1.0' and ./mdto:begripLabel = 'openbaarheid niet beoordeeld (Archiefwet 1995)')">Combinatie begripCode en begripLabel niet gevonden volgens de begrippenlijst: Code="<value-of select="./mdto:begripCode"/>" en label="<value-of select="./mdto:begripLabel"/>"</assert>
 		</rule>
 	</pattern>
 	
