@@ -49,7 +49,7 @@
     <pattern id="topx-pattern-4">
         <rule context="topx:algoritme">
             <p>Controleer de tekstuele inhoud van element "algoritme"</p>
-           <assert test="matches(., '^(MD5|SHA1|SHA256|SHA512)$')"
+           <assert test="matches(., '^(MD5|SHA1|SHA256|SHA512|MD-5|SHA-1|SHA-256|SHA-512)$')"
                >De waarde van het "algoritme"-gegeven in de ToPX-metadata is niet MD5, SHA1, SHA256, of SHA512 maar "<value-of select="."/>"</assert>
         </rule>
     </pattern>
