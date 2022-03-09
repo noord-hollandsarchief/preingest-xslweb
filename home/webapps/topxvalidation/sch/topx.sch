@@ -17,20 +17,20 @@
             <report test="count(topx:openbaarheid/topx:omschrijvingBeperkingen) gt 1">Er is meer dan één "openbaarheid/omschrijvingBeperkingen"-gegeven in de ToPX-metadata</report>
         </rule>
     </pattern>
-    
+    <!--
     <pattern id="topx-pattern-2">
-        <!-- Ignoring the fact that we  currently do not support omschrijvingBeperkingen as a child of element bestand. This will be checked by another rule,
+         Ignoring the fact that we  currently do not support omschrijvingBeperkingen as a child of element bestand. This will be checked by another rule,
              and we keep the format check agnostic of the context sothat the check will remain to be performed if we ever allow omschrijvingBeperkingen inside bestand.
              
              A deviation of this idea can be implemented by changing the rule context to aggregatie/openbaarheid/omschrijvingBeperkingen
-        -->
+        
         <rule context="topx:omschrijvingBeperkingen">
             <p>Controleer de tekstuele inhoud van element "omschrijvingBeperkingen"</p>
             <assert test="matches(., '^(publiek(_metadata)?|intern(_\S+)?)$', 'i')"
                 >De inhoud van het gegeven "omschrijvingBeperkingen" voldoet niet aan het vereiste patroon</assert>
         </rule>
     </pattern>
-    
+    -->
     <pattern id="topx-pattern-3">
         <rule context="topx:bestand">
             <p>Controleer of er precies één element "algoritme" is (dus niet 0 of meer dan 1)</p>
