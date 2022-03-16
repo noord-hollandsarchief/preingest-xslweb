@@ -20,8 +20,8 @@
 			<assert test="count(mdto:beperkingGebruik/mdto:beperkingGebruikType/mdto:begripLabel) = 1 and count(mdto:beperkingGebruik/mdto:beperkingGebruikType/mdto:begripCode) = 1">Element "begripCode" niet gevonden in MDTO-metadata. Element wordt wel verwacht/vereist naast "begripLabel"</assert>
 		</rule>
 	</pattern>
-	
-		<pattern>
+	<!--
+	<pattern>
 		<rule context="mdto:informatieobject/mdto:beperkingGebruik/mdto:beperkingGebruikType">
 			<assert test="(mdto:begripCode = 'Openbaarheid/AW1995/BeperktOpenbaar-levenssfeer/1.0' and ./mdto:begripLabel = 'beperkt openbaar; eerbiediging van de persoonlijke levenssfeer (Archiefwet 1995)') or
 			(mdto:begripCode = 'Openbaarheid/AW1995/BeperktOpenbaar-staatsbelang/1.0' and ./mdto:begripLabel = 'beperkt openbaar; staatsbelang (Archiefwet 1995)') or
@@ -33,7 +33,7 @@
 			(mdto:begripCode = 'Openbaarheid/AW1995/NietBeoordeeld/1.0' and ./mdto:begripLabel = 'openbaarheid niet beoordeeld (Archiefwet 1995)')">Combinatie begripCode en begripLabel niet gevonden volgens de begrippenlijst: Code="<value-of select="./mdto:begripCode"/>" en label="<value-of select="./mdto:begripLabel"/>"</assert>
 		</rule>
 	</pattern>
-	
+	-->	
 	<pattern>
 		<rule context="mdto:bestand">
 			<assert test="count(mdto:checksum) = 1">Element "checksumGegevens" niet gevonden in MDTO-metadata</assert>
