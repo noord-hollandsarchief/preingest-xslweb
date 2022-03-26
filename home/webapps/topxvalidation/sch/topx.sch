@@ -17,20 +17,20 @@
             <report test="count(topx:openbaarheid/topx:omschrijvingBeperkingen) gt 1">Er is meer dan één "openbaarheid/omschrijvingBeperkingen"-gegeven in de ToPX-metadata</report>
         </rule>
     </pattern>
-    <!--
+    
     <pattern id="topx-pattern-2">
          Ignoring the fact that we  currently do not support omschrijvingBeperkingen as a child of element bestand. This will be checked by another rule,
              and we keep the format check agnostic of the context sothat the check will remain to be performed if we ever allow omschrijvingBeperkingen inside bestand.
              
              A deviation of this idea can be implemented by changing the rule context to aggregatie/openbaarheid/omschrijvingBeperkingen
         
-        <rule context="topx:omschrijvingBeperkingen">
+        <rule context="topx:aggregatie/topx:openbaarheid/topx:omschrijvingBeperkingen">
             <p>Controleer de tekstuele inhoud van element "omschrijvingBeperkingen"</p>
-            <assert test="matches(., '^(publiek(_metadata)?|intern(_\S+)?)$', 'i')"
+            <assert test="matches(., '^(Openbaar|Niet openbaar|Beperkt openbaar)$')"
                 >De inhoud van het gegeven "omschrijvingBeperkingen" voldoet niet aan het vereiste patroon</assert>
         </rule>
     </pattern>
-    -->
+    
     <pattern id="topx-pattern-3">
         <rule context="topx:bestand">
             <p>Controleer of er precies één element "algoritme" is (dus niet 0 of meer dan 1)</p>
@@ -40,9 +40,10 @@
             <p>Controleer of er precies één element "waarde" (behorend bij "algoritme") is (dus niet 0 of meer dan 1)</p>
             <report test="count(topx:formaat/topx:fysiekeIntegriteit/topx:waarde) eq 0">Het "formaat/fysiekeIntegriteit/waarde"-gegeven ontbreekt in de ToPX-metadata</report>
             <report test="count(topx:formaat/topx:fysiekeIntegriteit/topx:waarde) gt 1">Er is meer dan één "formaat/fysiekeIntegriteit/waarde"-gegeven in de ToPX-metadata</report>
-            
+            <!--
             <p>Controleer of er niet sprake is van een openbaarheid element (with the disallowed omschrijvingBeperkingen inside it)</p>
             <assert test="empty(topx:openbaarheid/topx:omschrijvingBeperkingen)">Op bestandsniveau wordt het gegeven omschrijvingBeperkingen niet ondersteund</assert>
+			-->
         </rule>
     </pattern>
     
