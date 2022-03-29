@@ -17,7 +17,7 @@
 	
 	<pattern>
 		<rule context="mdto:informatieobject">
-			<assert test="count(mdto:beperkingGebruik/mdto:beperkingGebruikType/mdto:begripLabel) = 1 and count(mdto:beperkingGebruik/mdto:beperkingGebruikType/mdto:begripCode) = 1">Element "begripCode" niet gevonden in MDTO-metadata. Element wordt wel verwacht/vereist naast "begripLabel"</assert>
+			<assert test="count(mdto:beperkingGebruik/mdto:beperkingGebruikType/mdto:begripLabel) = 1">Element "begripLabel" niet gevonden in MDTO-metadata.</assert>
 		</rule>
 	</pattern>
 	<!--
