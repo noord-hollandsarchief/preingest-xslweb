@@ -8,6 +8,7 @@
 			<assert test="count(topx:naam) eq 1">Er is geen of meer dan één "naam"-gegeven in de ToPX-metadata</assert>
 		</rule>
 	</pattern>
+	<!-- Niet van toepassing. Aangepast op verzoek Mark met instemming Lucas op 6-4-2022 om 16:19
 	<pattern id="topx-pattern-1c">
 		<rule context="topx:aggregatie | topx:bestand">
 			<p>Controleer of er precies één element "omschrijving" is (dus niet 0 of meer dan 1)</p>
@@ -15,6 +16,7 @@
 			<assert test="count(topx:classificatie/topx:omschrijving) eq 1">Er is geen of meer dan één "classificatie/omschrijving"-gegeven in de ToPX-metadata</assert>
 		</rule>
 	</pattern>
+	-->
 	<pattern id="topx-pattern-2a">
 		<rule context="topx:aggregatie">
 			<p>Controleer of er precies één element "omschrijvingBeperkingen" is (dus niet 0 of meer dan 1)</p>
